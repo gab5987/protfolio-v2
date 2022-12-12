@@ -7,7 +7,7 @@ var background = require("./data/bg-img.gif");
 const delay = (ms: any) => new Promise(res => setTimeout(res, ms));
 
 export default class App extends React.Component
-<{}, {counter: number, message: string}>
+<{}, {counter: number, message: string,}>
 {
   constructor(props: never) {
     super(props);
@@ -28,7 +28,7 @@ export default class App extends React.Component
     await this.reduceCounter()
   }
 
-  updateMessage = () => this.setState({ message: `this message will autodestruc in ${this.state.counter}`});
+  updateMessage = () => this.setState({ message: `this message will self destruct in ${this.state.counter}\"`});
   redirect = () => window.location.replace("/content")
 
   reduceCounter = async () => {
@@ -47,7 +47,6 @@ export default class App extends React.Component
           <small> { this.state.message } </small>
         </div>
       </div>
-    )
-
+    );
   }
 }
