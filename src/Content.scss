@@ -1,0 +1,12 @@
+.Content-part1 {
+    .header-title {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      width: 100%;
+      height: 23px;
+      font-size: calc(2px + 2vmin);
+      color: #ffffff;
+    }
+  }
