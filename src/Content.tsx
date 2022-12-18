@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.scss";
+import "./Content.scss";
 var background = require("./data/bg-img2.gif");
 
 const styleHeader = {
@@ -7,10 +8,6 @@ const styleHeader = {
     fontSize: "calc(6px + 2vmin)",
     textAlign: "center" as const,
     webkitTextStroke: ".3px black",
-}
-
-const styleTitleSection = {
-    
 }
 
 export default class Content extends React.Component {
@@ -28,12 +25,46 @@ export default class Content extends React.Component {
                     </div>
                 </section>
 
-                <section>
-                    <div className="title">
-                        <h1>Content</h1>
+                <section className="section diff-bg">
+                    <div className="title-text heading">
+                        <h1>About</h1>
                     </div>
+                    <p className="paragraph">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime nostrum molestiae quidem, quam itaque minus nihil esse adipisci repellendus id autem quaerat sint accusamus suscipit expedita reiciendis repudiandae nemo molestias?
+                    </p>
                 </section>
 
+                <section className="section">
+                    <div className="title-text heading">
+                        <h1>Programming Proficiency</h1>
+                    </div>
+                    <div className="skills">
+                        <ul>
+                        <li>teste
+                        </li>
+                        <li>teste
+                        </li>
+                        <li>teste
+                        </li>
+                        <li>teste
+                        </li>
+                        <li>teste
+                        </li>
+                        <li>teste
+                        </li>
+                        <li>teste
+                        </li>
+                        <li>teste
+                        </li>
+                        <li>teste
+                        </li>
+                        <li>teste
+                        </li>
+                        <li>teste
+                        </li>
+                        </ul>
+                    </div>
+                </section>
             </>
         )
     }
