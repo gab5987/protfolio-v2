@@ -2,6 +2,7 @@ import React from "react";
 import "./App.scss";
 import "./Content.scss";
 var background = require("./data/bg-img2.gif");
+const sharedData = require("./data/content.json");
 
 const styleHeader = {
     color: "white", 
@@ -10,9 +11,13 @@ const styleHeader = {
     webkitTextStroke: ".3px black",
 }
 
+var skills: any = []
 export default class Content extends React.Component {
     constructor(props: never) {
         super(props);
+    }
+
+    componentDidMount(): void {
     }
 
     render() {
@@ -40,29 +45,37 @@ export default class Content extends React.Component {
                     </div>
                     <div className="skills">
                         <ul>
-                        <li>teste
-                        </li>
-                        <li>teste
-                        </li>
-                        <li>teste
-                        </li>
-                        <li>teste
-                        </li>
-                        <li>teste
-                        </li>
-                        <li>teste
-                        </li>
-                        <li>teste
-                        </li>
-                        <li>teste
-                        </li>
-                        <li>teste
-                        </li>
-                        <li>teste
-                        </li>
-                        <li>teste
-                        </li>
+                        {
+                            sharedData.skills.itens.map((item: any) => {
+                                return(
+                                    <li style={{ color: item.color }}>
+                                        { item.name }
+                                    </li>       
+                                )
+                            })
+                        }
                         </ul>
+                    </div>
+                </section>
+
+                <section className="section diff-bg">
+                    <div className="title-text heading">
+                        <h1>Education</h1>
+                    </div>
+
+                    <div className="education-timeline">
+                    <div data-date="September 2010 – July 2015">
+                        <h3>Lorem ipsum dolor sit
+                        </h3>
+                        <h4>Lorem ipsum dolor sit
+                        </h4>
+                    </div>
+                    <div data-date="August 2015 – April 2017">
+                        <h3>Lorem ipsum dolor sit
+                        </h3>
+                        <h4>Lorem ipsum dolor sit
+                        </h4>
+                    </div>
                     </div>
                 </section>
             </>
