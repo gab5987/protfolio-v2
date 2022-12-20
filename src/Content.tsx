@@ -96,14 +96,15 @@ export default class Content extends React.Component<
                         <div className="cc-text">
                             <h3>{item.title}</h3>
                             <p>{item.description}</p>
-                            <div className="link-holder"><a href={item.link} >view more</a></div>
+                            {item.link && <div className="link-holder"><a onClick={() => window.open(`${item.link}`, '_blank')} >view more</a></div>}
                         </div>
                     </div>
                 );
             })}
         </section>
 
-        
+        <section className="footer">
+        </section>
       </>
     );
   }
