@@ -2,7 +2,8 @@ import React from "react";
 import "./App.scss";
 import "./Content.scss";
 import { sharedData } from "./data/content.js";
-var background = require("./data/bg-img2.gif");
+let background = require("./data/bg-img2.gif");
+let background2 = require("./data/bg-img3.gif");
 
 const styleHeader = {
   color: "white",
@@ -121,7 +122,32 @@ export default class Content extends React.Component<{}, { windowWidth: any }> {
           })}
         </section>
 
-        <section className="footer"></section>
+        <section
+          className="section footer"
+          style={{ backgroundImage: `url(${background2})` }}
+        >
+          <div className="title-text heading" style={{ color: "#fff" }}>
+            <h1>Get in Touch</h1>
+          </div>
+          <div className="container" style={{ background: "#dedede" }}>
+            <p className="paragraph">
+              Did you like my profile? Want to get to know me a little more?
+              <br />
+              Don't hesitate to send me a message!
+            </p>
+
+            {sharedData.contact.social.map((item: any) => {
+              return (
+                <a
+                  style={{ padding: "10px" }}
+                  onClick={() => window.open(`${item.link}`, "_blank")}
+                >
+                  <i className={`nes-icon ${item.name} is-medium`}></i>
+                </a>
+              );
+            })}
+          </div>
+        </section>
       </>
     );
   }

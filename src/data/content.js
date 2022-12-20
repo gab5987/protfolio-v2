@@ -46,4 +46,27 @@ export const sharedData = {
       },
     ],
   },
+
+  contact: {
+    title: "Get in Touch",
+    message: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    social: [
+      {
+        name: "github",
+        link: "https://github.com/gab5987",
+      },
+      {
+        name: "instagram",
+        link: "https://github.com/gab5987",
+      },
+      {
+        name: "whatsapp",
+        link: "https://wa.me/5548988401390",
+      },
+      {
+        name: "linkedin",
+        link: "https://www.linkedin.com/in/gabriel-oliveira-5987/",
+      },
+    ],
+  },
 };
