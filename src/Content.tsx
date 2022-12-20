@@ -41,19 +41,14 @@ export default class Content extends React.Component<{}, { windowWidth: any }> {
 
         <section className="section diff-bg">
           <div className="title-text heading">
-            <h1>About</h1>
+            <h1>{sharedData.about.title}</h1>
           </div>
-          <p className="paragraph">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-            nostrum molestiae quidem, quam itaque minus nihil esse adipisci
-            repellendus id autem quaerat sint accusamus suscipit expedita
-            reiciendis repudiandae nemo molestias?
-          </p>
+          <p className="paragraph"> {sharedData.about.message} </p>
         </section>
 
         <section className="section">
           <div className="title-text heading">
-            <h1>Programming Proficiency</h1>
+            <h1> {sharedData.skills.title} </h1>
           </div>
           <div className="skills">
             <ul>
@@ -66,7 +61,7 @@ export default class Content extends React.Component<{}, { windowWidth: any }> {
 
         <section className="section diff-bg">
           <div className="title-text heading">
-            <h1>Education</h1>
+            <h1> {sharedData.education.title} </h1>
           </div>
 
           <div className="education-timeline">
@@ -86,7 +81,7 @@ export default class Content extends React.Component<{}, { windowWidth: any }> {
 
         <section className="section">
           <div className="title-text heading">
-            <h1>Projects</h1>
+            <h1> {sharedData.projects.title} </h1>
           </div>
 
           {sharedData.projects.itens.map((item: any) => {
