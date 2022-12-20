@@ -62,14 +62,17 @@ export default class Content extends React.Component {
           </div>
 
           <div className="education-timeline">
-            <div data-date="September 2010 – July 2015">
-              <h3>Lorem ipsum dolor sit</h3>
-              <h4>Lorem ipsum dolor sit</h4>
-            </div>
-            <div data-date="August 2015 – April 2017">
-              <h3>Lorem ipsum dolor sit</h3>
-              <h4>Lorem ipsum dolor sit</h4>
-            </div>
+            {sharedData.education.itens.map((item: any) => {
+              return (
+                <div>
+                  <h3>{item.title}</h3>
+                  <h4>{item.subtitle}</h4>
+                  <h4>
+                    {item.date.start} -{`>`} {item.date.end}
+                  </h4>
+                </div>
+              );
+            })}
           </div>
         </section>
       </>

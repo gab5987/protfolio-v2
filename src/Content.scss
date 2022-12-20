@@ -71,36 +71,33 @@
   background-color: #f3f3f3;
 }
 
-#education-timeline {
-  margin: 30px auto 0 auto;
+.education-timeline {
+  margin: 10px auto 0 auto;
   position: relative;
   max-width: 1000px;
-}
-#education-timeline div {
-  background: #fff;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 3px solid #c2c2c2;
-}
-#education-timeline h3 {
-  font-size: 1.5em;
-  font-weight: 300;
-  color: #374054;
-  display: inline-block;
-  margin: 0;
-}
-#education-timeline h4 {
-  font-size: 1.2em;
-  font-weight: 300;
-  color: #7e8890;
-  margin: 0 0 15px 0;
-}
-.education-timeline p {
-  color: #74808a;
-  font-size: 0.9em;
-  margin: 0;
-}
-#education-timeline:before,
-#education-timeline:after {
-  content: none;
+
+  div {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid #c2c2c2;
+  }
+
+  h3 {
+    font-size: calc(5px + 2vmin);
+    min-height: 1px;
+    font-weight: 300;
+    color: #374054;
+    display: inline-block;
+    margin: 0;
+    margin: 0 0 15px 0;
+  }
+
+  h4 {
+    font-size: calc(3px + 2vmin);
+    min-height: 1px;
+    font-weight: 300;
+    color: #7e8890;
+    
+  }
 }
