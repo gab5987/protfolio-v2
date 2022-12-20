@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.scss";
 import "./Content.scss";
+import {sharedData} from "./data/content.js";
 var background = require("./data/bg-img2.gif");
-const sharedData = require("./data/content.json");
 
 const styleHeader = {
   color: "white",
@@ -11,12 +11,18 @@ const styleHeader = {
   webkitTextStroke: ".3px black",
 };
 
-export default class Content extends React.Component {
+export default class Content extends React.Component<
+{}, { windowWidth: any }> {
   constructor(props: never) {
     super(props);
+    this.state = {
+        windowWidth: window.innerWidth,
+    };
   }
 
-  componentDidMount(): void {}
+  componentDidMount(): void {
+    window.addEventListener("resize", () => this.setState({ windowWidth: window.innerWidth }));
+  }
 
   render() {
     return (
@@ -75,6 +81,29 @@ export default class Content extends React.Component {
             })}
           </div>
         </section>
+
+        <section className="section">
+            <div className="title-text heading">
+                <h1>Projects</h1>
+            </div>
+
+            {sharedData.projects.itens.map((item: any) => {
+                return(
+                    <div className="projects-container">
+                        <div className="cc-image">
+                            { this.state.windowWidth > 900 && <img src={item.image} alt="project image"/>}
+                        </div>
+                        <div className="cc-text">
+                            <h3>{item.title}</h3>
+                            <p>{item.description}</p>
+                            <div className="link-holder"><a href={item.link} >view more</a></div>
+                        </div>
+                    </div>
+                );
+            })}
+        </section>
+
+        
       </>
     );
   }
