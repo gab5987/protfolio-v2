@@ -91,7 +91,7 @@ export const sharedData = {
       },
       {
         name: "instagram",
-        link: "https://github.com/gab5987",
+        link: "https://www.instagram.com/gabnovalski/",
       },
       {
         name: "whatsapp",
@@ -99,7 +99,7 @@ export const sharedData = {
       },
       {
         name: "linkedin",
-        link: "https://www.linkedin.com/in/gabriel-oliveira-5987/",
+        link: "https://www.linkedin.com/in/gabriel-novalski-8b0878240/",
       },
     ],
   },
