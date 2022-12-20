@@ -1,15 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import App from './App';
-import Content from './Content';
+import App from "./App";
+import Content from "./Content";
 
 const router = createBrowserRouter([
   {
@@ -18,13 +15,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/content",
-    element: <Content />
-  }
+    element: <Content />,
+  },
 ]);
 
-
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>

@@ -1,21 +1,21 @@
 {
-    "about": {
-        "title": "About",
-        "message": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime nostrum molestiae quidem, quam itaque minus nihil esse adipisci repellendus id autem quaerat sint accusamus suscipit expedita reiciendis repudiandae nemo molestias?"
-    },
-    "skills": {
-        "title": "Programming Proeficiency",
-        "itens": [
-            {"name": "HTML", "color": "orange"},
-            {"name": "CSS", "color": "blue"},
-            {"name": "JavaScript", "color": "yellow"},
-            {"name": "PHP", "color": "purple"},
-            {"name": "MySQL", "color": "green"},
-            {"name": "Python", "color": "yellow"},
-            {"name": "C#", "color": "blue"},
-            {"name": "C++", "color": "purple"},
-            {"name": "Java", "color": "orange"},
-            {"name": "C", "color": "green"}
-        ]
-    }
+  "about": {
+    "title": "About",
+    "message": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime nostrum molestiae quidem, quam itaque minus nihil esse adipisci repellendus id autem quaerat sint accusamus suscipit expedita reiciendis repudiandae nemo molestias?"
+  },
+  "skills": {
+    "title": "Programming Proeficiency",
+    "itens": [
+      { "name": "HTML", "color": "orange" },
+      { "name": "CSS", "color": "blue" },
+      { "name": "JavaScript", "color": "yellow" },
+      { "name": "PHP", "color": "purple" },
+      { "name": "MySQL", "color": "green" },
+      { "name": "Python", "color": "yellow" },
+      { "name": "C#", "color": "blue" },
+      { "name": "C++", "color": "purple" },
+      { "name": "Java", "color": "orange" },
+      { "name": "C", "color": "green" }
+    ]
+  }
 }
