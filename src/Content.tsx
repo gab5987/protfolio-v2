@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.scss";
 import "./Content.scss";
-import {sharedData} from "./data/content.js";
+import { sharedData } from "./data/content.js";
 var background = require("./data/bg-img2.gif");
 
 const styleHeader = {
@@ -11,17 +11,18 @@ const styleHeader = {
   webkitTextStroke: ".3px black",
 };
 
-export default class Content extends React.Component<
-{}, { windowWidth: any }> {
+export default class Content extends React.Component<{}, { windowWidth: any }> {
   constructor(props: never) {
     super(props);
     this.state = {
-        windowWidth: window.innerWidth,
+      windowWidth: window.innerWidth,
     };
   }
 
   componentDidMount(): void {
-    window.addEventListener("resize", () => this.setState({ windowWidth: window.innerWidth }));
+    window.addEventListener("resize", () =>
+      this.setState({ windowWidth: window.innerWidth })
+    );
   }
 
   render() {
@@ -83,28 +84,44 @@ export default class Content extends React.Component<
         </section>
 
         <section className="section">
-            <div className="title-text heading">
-                <h1>Projects</h1>
-            </div>
+          <div className="title-text heading">
+            <h1>Projects</h1>
+          </div>
 
-            {sharedData.projects.itens.map((item: any) => {
-                return(
-                    <div className="projects-container">
-                        <div className="cc-image">
-                            { this.state.windowWidth > 900 && <img src={item.image} alt="project image"/>}
-                        </div>
-                        <div className="cc-text">
-                            <h3>{item.title}</h3>
-                            <p>{item.description}</p>
-                            {item.link && <div className="link-holder"><a onClick={() => window.open(`${item.link}`, '_blank')} >view more</a></div>}
-                        </div>
+          {sharedData.projects.itens.map((item: any) => {
+            return (
+              <div
+                className={
+                  this.state.windowWidth > 900
+                    ? "projects container"
+                    : "container"
+                }
+              >
+                <div className="cc-image">
+                  {this.state.windowWidth > 900 && (
+                    <img src={item.image} alt="project image" />
+                  )}
+                </div>
+                <div className="cc-text">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  {item.link && (
+                    <div className="link-holder">
+                      <a onClick={() => window.open(`${item.link}`, "_blank")}>
+                        view more
+                      </a>
                     </div>
-                );
-            })}
+                  )}
+                </div>
+                {this.state.windowWidth < 900 && (
+                  <img src={item.image} alt="project image" />
+                )}
+              </div>
+            );
+          })}
         </section>
 
-        <section className="footer">
-        </section>
+        <section className="footer"></section>
       </>
     );
   }
